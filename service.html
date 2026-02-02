@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JoLuck Media Studio</title>
+    <style>
+        body{
+            background: radial-gradient(circle at top, #151822, #0E0F13);
+            color: #fff;  
+        }
+       .page-tittle{
+        text-align: center;
+        letter-spacing: 6px;
+        font-size: 34px;
+        margin: 40px 0;
+       } 
+       .services-wrapper{
+        padding: 40px 8%;
+       }
+       .services-container{
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 50px;
+       }
+       .services-left h2{
+        font-size: 32px;
+        margin-bottom: 15px;
+       }
+       .services-left p{
+        color: #aaa;
+        line-height: 1.7;
+        max-width: 420px;
+       }
+       .services-left .mt{
+        margin-top: 60px;
+       }
+       .left-image{
+        margin-top: 25px;
+       }
+       .left-image img{
+        width: 100%;
+        border-radius: 18px;
+        opacity: 0.85;
+       }
+
+       .services-right{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+       }
+       .service-card{
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 18px;
+        overflow: hidden;
+        position: relative;
+        transition: 0.4s ease;
+        cursor: pointer;
+        
+        padding-left: 25px;
+        background-size: cover;
+        background-position: center;
+       }
+       .service-card::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.55));
+        z-index: 1;
+       }
+       .service-card::after{
+        content: "";
+        position: absolute;
+        left: 10%;
+        bottom: 0;
+        width: 80%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, orange, transparent);
+        opacity: 0;
+        transition: 0.4s;
+       }
+       .service-card img{
+        width: 160px;
+        height: 120px;
+        object-fit: cover;
+       }
+       .service-content{
+        padding: 25px;
+        position: relative;
+        z-index: 2;
+       }
+       .service-content h3{
+        font-size: 22px;
+        margin-bottom: 6px;
+       }
+       .service-content p{
+        color: #ccc;
+        font-size: 15px;
+       }
+       .service-card:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 18px 45px rgba(255, 140, 0, 0.35);
+       }
+       .service-card:hover::after{
+        opacity: 1;
+       }
+       @media(max-width: 900px){
+        .services-container{
+            grid-template-columns: 1fr;
+        }
+        .service-card{
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-card img{
+            width: 100%;
+            height: 180px;
+        }
+       }
+        .bg-design{
+            background-image: url("premium_photo-1661284886711-4eaee4fa7771.jpeg");
+        }
+        .bg-photo{
+            background-image: url("picha6.jpeg");
+        }
+        .bg-video{
+            background-image: url("premium_photo-1682146717223-874ac7dcc607.jpeg");
+        }
+        .bg-social{
+            background-image: url("picha7.jpeg");
+        }
+    </style>
+</head>
+<body>
+    <header class="main-nav">
+      <nav class="navbar">
+          <div class="div-logo">
+             <a href="#"><img src="logo1.png" alt="" class="logo"></a>
+          </div>
+          <ul class="navlist">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="service.html" class="active">Services</a></li>
+             <li><a href="portfolio.html">Portfolio</a></li>
+             <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+    </header>
+
+    <section class="services-wrapper">
+        <h1 class="page-tittle">SERVICES</h1>
+        <div class="services-container">
+            <div class="services-left">
+               <h2>Our Services</h2>
+               <p>
+                Providing a range of creative and digital solutions to help your business
+                 stand out and succeed.
+               </p>
+               <h2 class="mt">Our Services</h2>
+               <div class="left-image">
+                 <img src="premium_photo-1661284886711-4eaee4fa7771.jpeg" alt="">
+               </div>
+            </div>
+            <div class="services-right">
+                <div class="service-card bg-design">
+                    <img src="picha11.jpg" alt="">
+                    <div class="service-content">
+                        <h3>Graphic Design</h3>
+                        <p>logos, Posters, Branding</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-photo">
+                    <img src="picha5.jpeg" alt="">
+                    <div class="service-content">
+                        <h3>Photography</h3>
+                        <p>Events, Portraits, Products</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-video">
+                    <img src="picha4.jpeg" alt="">
+                    <div class="service-content">
+                        <h3>Video Production</h3>
+                        <p>Ads, Reels, Promos</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-social">
+                    <img src="pinterest_1769012213833.jpg" alt="">
+                    <div class="service-content">
+                        <h3>Social Media Management</h3>
+                        <p>Content $ Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p class="social-p">Social Media Links</p>
+    <div class="v-social-links1">
+            <a href="#">
+              WhatsApp
+            </a>
+             <a href="#">
+              Instagram
+            </a>
+             <a href="#">
+              Facebook
+            </a>
+             <a href="#">
+              TikTok
+            </a>
+         </div>
+
+</body>
+</html>
